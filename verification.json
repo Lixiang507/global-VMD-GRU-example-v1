@@ -1,0 +1,231 @@
+{
+  "title": "OFFLINE / NON-CAUSAL",
+  "self_test": {
+    "vmd_finite_and_20_modes": true,
+    "residual_assigned_reconstruction_max_abs": 1.7763568394002505e-15,
+    "odd_length_discards_last_sample": true,
+    "ar_pseudoinverse_vs_lstsq_max_abs": 2.7755575615628914e-16,
+    "esn_states_and_readout_finite": true,
+    "esn_scaled_spectral_radii": [
+      0.899999999999997,
+      0.9000000000000024
+    ],
+    "gru_channel_isolation": true,
+    "grouped_gru_vs_torch_gru_max_abs": 4.470348358154297e-08,
+    "causal_prefix_future_perturbation_equal": true,
+    "passed": true
+  },
+  "old_directories": {
+    "unchanged": true,
+    "changes": [],
+    "checked_files": 37983
+  },
+  "source_copies": {
+    "sources": [
+      {
+        "source": "E:\\Chatgpt项目\\卫星微振动预测\\备份20260924_092854\\CEEMDAN-VMD-GRU-main\\tru1_mat.py",
+        "destination": "src/tru1_mat.py",
+        "sha256": "bdbd72f002075ff0382df32a4806ca9ac19dda0160e860ccb90ab675b63473d8",
+        "byte_identical": true
+      },
+      {
+        "source": "E:\\VScode代码存储\\vmdpy-master\\vmdpy\\vmdpy.py",
+        "destination": "src/vmd_local.py",
+        "sha256": "4d1b294bb7e699e2c0b481a358254aa042f51394996048196b5f9f3953fda9ee",
+        "byte_identical": true
+      }
+    ],
+    "prompt_sha256": "574b2f8ac3af97b76c5bcc34897d7eb511ea0559a8135c0182d652250e9a3aff"
+  },
+  "global_vmd": {
+    "seconds": 6.447830000000067,
+    "iterations_returned": 499,
+    "iteration_cap_diagnostic": true,
+    "residual_before_max_abs": 0.16842597443512375,
+    "residual_before_std": 0.041428577319291636,
+    "reconstruction_after_max_abs": 7.105427357601002e-15
+  },
+  "causal_vmd": {
+    "windows": 9745,
+    "wall_seconds": 1051.4154564,
+    "workers": 3,
+    "seconds_per_window_worker": {
+      "p50": 0.3590121999995972,
+      "p95": 0.45932338000056905,
+      "p99": 0.5719328399999721
+    },
+    "capped_windows": 4517,
+    "max_reconstruction_after": 2.1316282072803006e-14,
+    "caution": "worker time includes VMD and residual assignment, excludes predictor and scheduling; not end-to-end real-time latency"
+  },
+  "gru": {
+    "1": {
+      "device": "cuda",
+      "epochs": 60,
+      "best_epoch_by_mode": [
+        6,
+        58,
+        57,
+        60,
+        60,
+        60,
+        58,
+        59,
+        59,
+        57,
+        57,
+        58,
+        60,
+        59,
+        60,
+        60,
+        58,
+        59,
+        58,
+        60
+      ],
+      "reload_max_abs": 0.0
+    },
+    "5": {
+      "device": "cuda",
+      "epochs": 60,
+      "best_epoch_by_mode": [
+        7,
+        57,
+        58,
+        58,
+        58,
+        59,
+        60,
+        33,
+        58,
+        59,
+        56,
+        55,
+        57,
+        54,
+        58,
+        58,
+        57,
+        57,
+        59,
+        56
+      ],
+      "reload_max_abs": 0.0
+    },
+    "10": {
+      "device": "cuda",
+      "epochs": 60,
+      "best_epoch_by_mode": [
+        6,
+        59,
+        59,
+        46,
+        57,
+        58,
+        60,
+        60,
+        54,
+        58,
+        38,
+        58,
+        55,
+        60,
+        53,
+        49,
+        59,
+        57,
+        59,
+        57
+      ],
+      "reload_max_abs": 0.0
+    },
+    "15": {
+      "device": "cuda",
+      "epochs": 60,
+      "best_epoch_by_mode": [
+        6,
+        60,
+        54,
+        50,
+        57,
+        53,
+        53,
+        53,
+        43,
+        60,
+        59,
+        51,
+        59,
+        56,
+        59,
+        60,
+        60,
+        54,
+        49,
+        36
+      ],
+      "reload_max_abs": 0.0
+    }
+  },
+  "test_scoring_passes": 1,
+  "selection_frozen_unchanged": true,
+  "protocol_frozen_unchanged": true,
+  "elapsed_seconds": 1783.4079020999998,
+  "environment": {
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6"
+  },
+  "visual_review": {
+    "reviewed_by": "Codex visual inspection",
+    "figures": [
+      "figures/delay_rmse.png",
+      "figures/reconstruction.png",
+      "figures/causal_vs_global.png"
+    ],
+    "titles_include": "OFFLINE / NON-CAUSAL",
+    "legend_and_axes_readable": true,
+    "no_curve_shifts_or_interpolation": true,
+    "passed": true
+  },
+  "independent_metric_check": {
+    "CLI_preservation_guards": {
+      "passed": true,
+      "existing_run_rejected_without_modification": true,
+      "standalone_self_test_preserves_completed_status": true
+    },
+    "numerical_functions_unchanged_by_delivery_only_edits": true,
+    "frozen_protocol_selection_and_models_unchanged": true,
+    "original_reader_and_vmd_byte_identical": true,
+    "global_reconstruction_max_abs": 7.105427357601002e-15,
+    "all_9745_causal_window_reconstruction_max_abs": 2.1316282072803006e-14,
+    "metrics_recomputed_from_archived_predictions_max_difference": 0.0,
+    "metric_rows": {
+      "global": 192,
+      "causal": 90
+    },
+    "all_30_paired_causal_ratios_correct": true,
+    "revision_same_physical_sample_verified": true,
+    "revision_L2_median": 0.49708160852447536,
+    "ESN_selection_uses_only_validation_RMSE": true,
+    "self_test_checkpoint_reload_and_preservation_passed": true,
+    "three_figure_files_valid": true,
+    "passed": true
+  },
+  "limitations": [
+    "OFFLINE / NON-CAUSAL global decomposition",
+    "No universal causal lower-bound claim",
+    "Causal training starts 205 origins later for complete 256-sample histories"
+  ],
+  "tested_dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "h5py": "3.14.0",
+    "torch": "2.5.1+cu124",
+    "matplotlib": "3.11.0",
+    "cuda_available": true,
+    "torch_cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU"
+  }
+}
